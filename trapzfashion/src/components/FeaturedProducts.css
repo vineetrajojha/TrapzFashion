@@ -1,0 +1,120 @@
+.featured-products-section {
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+}
+
+.featured-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.featured-products-heading {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.view-all-button {
+  padding: 10px 20px;
+  background-color: #fff; /* White button */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.products-list .slick-slide {
+  padding: 10px; /* Add padding to create space between cards */
+}
+
+/* Styles for individual product cards */
+.product-card {
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide anything outside the rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack image and info vertically */
+}
+
+.product-image-wrapper {
+  width: 100%;
+  /* maintain aspect ratio */
+  position: relative;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  background-color: #f0f0f0; /* Placeholder background for image area */
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area without distorting aspect ratio */
+}
+
+.product-info {
+  padding: 15px;
+  /* align text to left */
+  text-align: left;
+}
+
+.product-name {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.product-availability {
+  font-size: 0.9em;
+  color: #555; /* Muted color for availability */
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333; /* Darker color for price */
+}
+
+/* Hide default slick-carousel arrows */
+.slick-prev, .slick-next {
+    display: none !important;
+}
+
+/* Style for the dots */
+.slick-dots li button:before {
+    font-size: 12px; /* Adjust size of dots */
+    color: #333; /* Color of dots */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #007bff; /* Active dot color */
+}
+
+@media (max-width: 600px) {
+  .featured-products-heading {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .products-grid {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  .product-card {
+    border-radius: 6px;
+  }
+  .product-image-wrapper {
+    aspect-ratio: 4/3;
+  }
+  .product-info {
+    padding: 0.7rem;
+  }
+  .product-info h3 {
+    font-size: 0.9rem;
+  }
+  .product-price {
+    font-size: 0.9rem;
+  }
+} 

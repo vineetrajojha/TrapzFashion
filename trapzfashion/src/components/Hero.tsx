@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import summer from '../assets/images/first.webp';
+import summer from '../assets/images/sports.jpg';
 
 const Hero: React.FC = () => {
   return (

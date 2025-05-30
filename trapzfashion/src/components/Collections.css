@@ -21,13 +21,6 @@
   padding: 0 1.5rem;
 }
 
-.collections-bottom-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
-
 .collection-poster {
   display: flex;
   flex-direction: column;
@@ -39,18 +32,9 @@
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
   transition: transform 0.18s, box-shadow 0.18s;
   background: none;
-}
-.collection-poster.big {
   min-height: 520px;
 }
-.collection-poster.small {
-  min-height: 380px;
-  width: 80%;
-  max-width: 340px;
-}
-.collections-bottom-row .collection-poster.small {
-  flex: 0 1 340px;
-}
+
 .collection-poster:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 6px 24px rgba(0,0,0,0.13);
@@ -67,9 +51,6 @@
   position: relative;
   border-radius: 8px 8px 0 0;
   text-decoration: none;
-}
-.collection-poster.small .collection-image-link {
-  min-height: 260px;
 }
 
 .collection-overlay {
@@ -132,33 +113,24 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .collection-poster.big {
+  .collection-poster {
     min-height: 400px;
   }
-  .collections-bottom-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  .collection-poster.small {
-    min-height: 260px;
-    width: 90%;
-    max-width: 340px;
+  .collection-image-link {
+    min-height: 300px;
   }
 }
 
 @media (max-width: 600px) {
-  .collections-top-row, .collections-bottom-row {
+  .collections-top-row {
     padding: 0 0.5rem;
     gap: 1rem;
   }
-  .collection-poster.big {
+  .collection-poster {
     min-height: 220px;
   }
-  .collection-poster.small {
-    min-height: 140px;
-    width: 100%;
-    max-width: 100%;
+  .collection-image-link {
+    min-height: 180px;
   }
   .collection-title {
     font-size: 1.2rem;
