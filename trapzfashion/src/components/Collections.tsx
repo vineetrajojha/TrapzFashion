@@ -5,31 +5,31 @@ const collections = [
   {
     title: `Support Your Favourite Team`,
     subtitle: 'Fan Merch Edition · IPL 2025',
-    image: '',
+    image: '/assets/images/default-collection.png',
     link: '/collections/knit-af',
   },
   {
     title: 'Hoodies House',
     subtitle: 'Limited Edition Hoodies',
-    image: '',
+    image: '/assets/images/default-collection.png',
     link: '/collections/denim-hues',
   },
   {
     title: 'Summer Ends',
     subtitle: 'New Collection Just Dropped',
-    image: '',
+    image: '/assets/images/default-collection.png',
     link: '/collections/summer-ends',
   },
   {
     title: 'FESTIVAL FLAIR',
     subtitle: 'Celebrate in Style',
-    image: '',
+    image: '/assets/images/default-collection.png',
     link: '/collections/festival-flair',
   },
   {
     title: 'MERCH MADNESS',
     subtitle: 'Exclusive Merchandise Drop',
-    image: '',
+    image: '/assets/images/default-collection.png',
     link: '/collections/merch-madness',
   },
 ];

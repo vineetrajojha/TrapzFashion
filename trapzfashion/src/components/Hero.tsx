@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import summer from '../assets/images/sports.jpg';
+import summer from '../assets/images/default-banner.png';
 
 const Hero: React.FC = () => {
   return (

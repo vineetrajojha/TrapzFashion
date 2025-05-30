@@ -18,90 +18,90 @@ interface Product {
 const featuredProducts: Product[] = [
   {
     id: 1,
-    name: 'Athletic Shoe',
-    brandLogo: '/assets/images/puma-logo.png', // Placeholder path
-    image: '/assets/images/product-1.png', // Placeholder path
+    name: 'RCB T-Shirt',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.5,
     price: '$99.99',
     availability: 'Available in all stores',
   },
   {
     id: 2,
-    name: 'Nike Air Force',
-    brandLogo: '/assets/images/nike-logo.png', // Placeholder path
-    image: '/assets/images/product-2.png', // Placeholder path
+    name: 'CSK T-Shirt',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.0,
     price: '$59.99',
     availability: 'Available online only',
   },
   {
     id: 3,
-    name: 'Nike Athletic',
-    brandLogo: '/assets/images/reebok-logo.png', // Placeholder path
-    image: '/assets/images/product-3.png', // Placeholder path
+    name: 'Striped Polo',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.5,
     price: '$29.99',
     availability: 'Available online only',
   },
   {
     id: 4,
-    name: 'PowerPace',
-    brandLogo: '/assets/images/adidas-logo.png', // Placeholder path
-    image: '/assets/images/product-4.png', // Placeholder path
+    name: 'Graphic Tee',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.0,
     price: '$240.00 USD',
     availability: 'Available in all stores',
   },
     {
     id: 5,
-    name: 'SwiftStep',
-    brandLogo: '/assets/images/puma-logo.png', // Placeholder path
-    image: '/assets/images/product-5.png', // Placeholder path
+    name: 'V-Neck Sweater',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.5,
     price: '$220.00 USD',
     availability: 'Available online only',
   },
   {
     id: 6,
-    name: 'MetroWalk',
-    brandLogo: '/assets/images/nike-logo.png', // Placeholder path
-    image: '/assets/images/product-6.png', // Placeholder path
+    name: 'Hooded Jacket',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.0,
     price: '$210.00 USD',
     availability: 'Available in all stores',
   },
   {
     id: 7,
-    name: 'TrailBlazer',
-    brandLogo: '/assets/images/reebok-logo.png', // Placeholder path
-    image: '/assets/images/product-7.png', // Placeholder path
+    name: 'Denim Shirt',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.5,
     price: '$260.00 USD',
     availability: 'Available online only',
   },
   {
     id: 8,
-    name: 'StreetRunner',
-    brandLogo: '/assets/images/adidas-logo.png', // Placeholder path
-    image: '/assets/images/product-8.png', // Placeholder path
+    name: 'Casual Trousers',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.0,
     price: '$230.00 USD',
     availability: 'Available in all stores',
   },
     {
     id: 9,
-    name: 'PeakPerformer',
-    brandLogo: '/assets/images/puma-logo.png', // Placeholder path
-    image: '/assets/images/product-9.png', // Placeholder path
+    name: 'Sports Shorts',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.5,
     price: '$250.00 USD',
     availability: 'Available online only',
   },
   {
     id: 10,
-    name: 'CityGlide',
-    brandLogo: '/assets/images/nike-logo.png', // Placeholder path
-    image: '/assets/images/product-10.png', // Placeholder path
+    name: 'Running Shoes',
+    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
+    image: '/assets/images/default-featured.png', // Updated placeholder path
     rating: 4.0,
     price: '$200.00 USD',
     availability: 'Available in all stores',

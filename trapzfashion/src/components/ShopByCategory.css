@@ -50,7 +50,7 @@
 
 .category-icon:hover {
   color: #fff;
-  background-color: #5b6877;
+  background-color: #000000;
 }
 .category-item:hover .category-icon {
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);

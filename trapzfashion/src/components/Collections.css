@@ -4,7 +4,7 @@
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
-  color: #222;
+  color: #ffffff;
 }
 
 .collections-section {
@@ -71,7 +71,7 @@
 .collection-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #181818;
+  color: #fcfcfc;
   margin: 0 0 0.5rem 0;
   letter-spacing: 2px;
   text-shadow: 0 2px 8px rgba(255,255,255,0.18);
@@ -79,7 +79,7 @@
 
 .collection-subtitle {
   font-size: 1.1rem;
-  color: #222;
+  color: #fbfbfb;
   font-weight: 400;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 8px rgba(255,255,255,0.12);
