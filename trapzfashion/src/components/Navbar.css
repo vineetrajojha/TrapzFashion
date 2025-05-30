@@ -1,0 +1,168 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  height: 64px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  z-index: 2100;
+  transition: color 0.2s;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.navbar-logo h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #111;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.nav-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-icons a {
+  color: #222;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a:hover {
+  color: #000000;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.38s cubic-bezier(.77,0,.18,1);
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+}
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+.sidebar-menu li {
+  margin-left: -1.2rem;
+  margin-bottom: -1.3rem;
+  margin-top: 2rem;
+}
+.sidebar-menu a {
+  display: flex;
+  align-items: center;
+  color: #222;
+  text-decoration: none;
+  font-size: 1.30rem;
+  font-weight: 280;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-label {
+  flex: 1;
+}
+.sidebar-social {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+.sidebar-social a {
+  color: #222;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+.sidebar-social a:hover {
+  color: #007bff;
+}
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.18);
+  z-index: 1500;
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    height: 56px;
+  }
+  .navbar-logo h1 {
+    font-size: 1.1rem;
+  }
+  .sidebar {
+    width: 80vw;
+    min-width: 180px;
+    max-width: 400px;
+    padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+    left: -80vw;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+}
