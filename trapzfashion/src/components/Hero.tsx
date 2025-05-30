@@ -1,16 +1,12 @@
 import React from 'react';
 import './Hero.css';
+import summer from '../assets/images/first.webp';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero">
+    <section className="hero" style={{ backgroundImage: `url(${summer})` }}>
       <div className="hero-content">
-        <h1>Discover Your Style</h1>
-        <p>Explore our latest collection of trendy fashion items</p>
-        <div className="hero-buttons">
-          <a href="/shop" className="btn btn-primary">Shop Now</a>
-          <a href="/collections" className="btn btn-secondary">View Collections</a>
-        </div>
+        <a href="/shop" className="hero-shop-btn">SHOP NOW</a>
       </div>
     </section>
   );

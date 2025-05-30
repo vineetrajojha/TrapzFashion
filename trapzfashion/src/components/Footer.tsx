@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { FiInstagram, FiTwitter, FiMail, FiPhone } from 'react-icons/fi';
 
 const Footer: React.FC = () => {
   return (
@@ -8,11 +9,13 @@ const Footer: React.FC = () => {
         <div className="footer-section">
           <h3>About Us</h3>
           <p>TrapzFashion is your destination for trendy and affordable fashion. We bring you the latest styles and collections.</p>
+          <ul className="footer-contact">
+            <li><span style={{ display: 'inline-flex', alignItems: 'center', marginRight: 6 }}>{React.createElement(FiMail as any, { size: 16 })}</span> <a href="mailto:support@trapzfashion.com">support@trapzfashion.com</a></li>
+            <li><span style={{ display: 'inline-flex', alignItems: 'center', marginRight: 6 }}>{React.createElement(FiPhone as any, { size: 16 })}</span> <a href="tel:+1234567890">+1 234 567 890</a></li>
+          </ul>
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-pinterest"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">{React.createElement(FiInstagram as any, { size: 20 })}</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">{React.createElement(FiTwitter as any, { size: 20 })}</a>
           </div>
         </div>
 
