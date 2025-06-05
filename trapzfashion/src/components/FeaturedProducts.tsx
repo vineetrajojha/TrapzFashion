@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './FeaturedProducts.css';
+import mario from '../assets/Tshirts/Bring your Childhood/Mario/Mario.png'
 
 interface Product {
   id: number;
@@ -19,8 +20,8 @@ const featuredProducts: Product[] = [
   {
     id: 1,
     name: 'RCB T-Shirt',
-    brandLogo: '/assets/images/default-featured.png', // Updated placeholder path
-    image: '/assets/images/default-featured.png', // Updated placeholder path
+    brandLogo: mario,
+    image: mario,
     rating: 4.5,
     price: '$99.99',
     availability: 'Available in all stores',

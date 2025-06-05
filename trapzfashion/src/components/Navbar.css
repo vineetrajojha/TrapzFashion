@@ -39,6 +39,9 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-logo h1 {
@@ -47,6 +50,17 @@
   color: #111;
   letter-spacing: 2px;
   margin: 0;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-image {
+  height: 240px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-icons {

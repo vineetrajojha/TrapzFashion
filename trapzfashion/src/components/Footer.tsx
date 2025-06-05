@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h3>About Us</h3>
-          <p>TrapzFashion is your destination for trendy and affordable fashion. We bring you the latest styles and collections.</p>
+          <p>Trap Fashion is your destination for trendy and affordable fashion. We bring you the latest styles and collections.</p>
           <ul className="footer-contact">
-            <li><span style={{ display: 'inline-flex', alignItems: 'center', marginRight: 6 }}>{React.createElement(FiMail as any, { size: 16 })}</span> <a href="mailto:support@trapzfashion.com">support@trapzfashion.com</a></li>
+            <li><span style={{ display: 'inline-flex', alignItems: 'center', marginRight: 6 }}>{React.createElement(FiMail as any, { size: 16 })}</span> <a href="mailto:support@trapfashion.com">support@trapfashion.com</a></li>
             <li><span style={{ display: 'inline-flex', alignItems: 'center', marginRight: 6 }}>{React.createElement(FiPhone as any, { size: 16 })}</span> <a href="tel:+1234567890">+1 234 567 890</a></li>
           </ul>
           <div className="social-links">
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
 
       <div className="footer-bottom">
         <div className="footer-bottom-content">
-          <p>&copy; {new Date().getFullYear()} TrapzFashion. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Trap Fashion. All rights reserved.</p>
           <div className="payment-methods">
             <i className="fab fa-cc-visa"></i>
             <i className="fab fa-cc-mastercard"></i>

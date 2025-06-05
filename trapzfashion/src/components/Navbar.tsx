@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { IconBaseProps } from 'react-icons';
+import logo from '../assets/images/logo.png';
 
 // Define icon types
 const MenuIcon = FiMenu as React.ComponentType<IconBaseProps>;
@@ -83,7 +84,9 @@ const Navbar: React.FC = () => {
 
         {/* Center Logo */}
         <div className="navbar-logo">
-          <Link to="/">Trap Fashion</Link>
+          <Link to="/">
+            <img src={logo} alt="Trap Fashion" className="logo-image" />
+          </Link>
         </div>
 
         {/* Right Icons */}
