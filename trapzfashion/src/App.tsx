@@ -10,6 +10,7 @@ import ShopByCategory from './components/ShopByCategory';
 import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import ComingSoon from './components/ComingSoon';
+import ProductDetail from './components/ProductDetail';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/about" element={<ComingSoon title="About Us" />} />
             <Route path="/help" element={<ComingSoon title="Help & Support" />} />
             <Route path="/account" element={<ComingSoon title="Account" />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
           </Routes>
         </main>
         <Footer />
