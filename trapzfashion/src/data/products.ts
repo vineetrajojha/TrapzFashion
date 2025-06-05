@@ -1,3 +1,5 @@
+import mario from '../assets/Tshirts/Bring your Childhood/Mario/Mario.png'
+
 export interface Product {
   id: number;
   name: string;
@@ -20,11 +22,11 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'Mario T-Shirt',
-    brandLogo: '../assets/Tshirts/Bring your Childhood/Mario/Mario.png',
-    image: '../assets/Tshirts/Bring your Childhood/Mario/Mario.png',
+    brandLogo: mario,
+    image: mario,
     rating: 4.5,
     price: '$99.99',
-    availability: 'Available in all stores',
+    availability: 'A nostalgic Mario-themed t-shirt that brings back childhood memories.',
     category: 'T-Shirts',
     collection: 'Bring your Childhood',
     description: 'A nostalgic Mario-themed t-shirt that brings back childhood memories.',
