@@ -60,12 +60,12 @@ const Navbar: React.FC = () => {
           <ul className="sidebar-menu">
             {menuItems.map((item) => (
               <li key={item.label}>
-                <a href={item.link} onClick={() => setSidebarOpen(false)}>
+                <Link to={item.link} onClick={() => setSidebarOpen(false)}>
                   <span className="sidebar-icon">
                     <item.icon size={22} />
                   </span>
                   <span className="sidebar-label">{item.label}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
