@@ -56,7 +56,7 @@ const FeaturedProducts: React.FC = () => {
           {featuredProducts.map((product) => (
             <div key={product.id} className="product-card">
               <div className="product-image-wrapper">
-                <img src={product.image} alt={product.name} className="product-image" />
+                 <img src={product.image} alt={product.name} className="product-image" />
               </div>
               <div className="product-info">
                 <div className="product-name">{product.name}</div>

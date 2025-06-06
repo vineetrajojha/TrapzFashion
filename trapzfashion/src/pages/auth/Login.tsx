@@ -4,6 +4,7 @@ import { FiMail, FiLock } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc';
 import { IconBaseProps } from 'react-icons';
 import './Auth.css';
+import authImage from '../../assets/Tshirts/Other Designs/Dream/main image.png'; // Assuming you have an image here
 
 // Define icon types
 const MailIcon = FiMail as React.ComponentType<IconBaseProps>;
@@ -49,58 +50,64 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-box">
-        <h2>Welcome Back</h2>
-        <p className="auth-subtitle">Please sign in to continue</p>
+    <div className="auth-page-container">
+      <div className="auth-form-section">
+        <div className="auth-box">
+          <h2>Welcome Back</h2>
+          <p className="auth-subtitle">Please sign in to continue</p>
 
-        {error && <div className="error-message">{error}</div>}
+          {error && <div className="error-message">{error}</div>}
 
-        <form onSubmit={handleSubmit} className="auth-form">
-          <div className="form-group">
-            <MailIcon className="input-icon" />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+          <form onSubmit={handleSubmit} className="auth-form">
+            <div className="form-group">
+              <MailIcon className="input-icon" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <LockIcon className="input-icon" />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <button type="submit" className="auth-button">
+              Sign In
+            </button>
+          </form>
+
+          <div className="divider">
+            <span>OR</span>
           </div>
 
-          <div className="form-group">
-            <LockIcon className="input-icon" />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <button type="submit" className="auth-button">
-            Sign In
+          <button onClick={handleGoogleSignIn} className="google-button">
+            <GoogleIcon size={20} />
+            Sign in with Google
           </button>
-        </form>
 
-        <div className="divider">
-          <span>OR</span>
+          <p className="auth-footer">
+            Don't have an account?{' '}
+            <Link to="/signup" className="auth-link">
+              Sign Up
+            </Link>
+          </p>
+          <p className="auth-terms">By creating an account or logging in, you agree with Trap's T&C and Privacy Policy</p>
         </div>
-
-        <button onClick={handleGoogleSignIn} className="google-button">
-          <GoogleIcon size={20} />
-          Sign in with Google
-        </button>
-
-        <p className="auth-footer">
-          Don't have an account?{' '}
-          <Link to="/signup" className="auth-link">
-            Sign Up
-          </Link>
-        </p>
+      </div>
+      <div className="auth-image-section">
+        <img src={authImage} alt="Authentication" className="auth-side-image" />
       </div>
     </div>
   );

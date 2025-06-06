@@ -95,25 +95,9 @@ const Navbar: React.FC = () => {
           <a href="/favourites"><HeartIcon size={22} /></a>
           <a href="/cart"><ShoppingCartIcon size={22} /></a>
           <a href="/coins" aria-label="trapz coins"><CircleIcon size={22} /></a>
-          <div 
-            className="icon-link account-icon"
-            onMouseEnter={() => setShowAccountMenu(true)}
-            onMouseLeave={() => setShowAccountMenu(false)}
-          >
+          <Link to="/login" className="icon-link">
             <UserIcon size={22} />
-            {showAccountMenu && (
-              <div className="account-menu">
-                <Link to="/login" className="account-menu-link">
-                  <LogInIcon size={18} />
-                  Sign In
-                </Link>
-                <Link to="/signup" className="account-menu-link">
-                  <UserPlusIcon size={18} />
-                  Create Account
-                </Link>
-              </div>
-            )}
-          </div>
+          </Link>
         </div>
       </div>
     </nav>
