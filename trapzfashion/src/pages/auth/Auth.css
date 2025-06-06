@@ -1,7 +1,7 @@
 .auth-page-container {
   display: flex;
   min-height: 100vh;
-  background-color: #ffffff; /* Match the body background or a chosen background */
+  background-color: #FBFBFB; /* Match the body background or a chosen background */
   flex-direction: row-reverse; /* Change flex direction to reverse for image on left */
 }
 
@@ -37,23 +37,27 @@
 }
 
 .auth-box {
-  background: white;
+  background: #FBFBFB;
   padding: 2rem;
   border-radius: 10px;
   width: 100%;
   max-width: 400px;
+  text-align: center;
 }
 
 .auth-box h2 {
   margin: 0 0 0.5rem;
   color: #333;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .auth-subtitle {
   color: #666;
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
 .auth-form {
@@ -71,17 +75,77 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.phone-input-group {
+  display: flex; /* Use Flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  /* Remove position: relative; if it was here, flex handles layout */
+  position: relative; /* Keep relative for absolute positioning of icon/code inside if needed, though flex should handle */
+  border: 1px solid #333; /* Border on the container */
+  border-radius: 5px; /* Border radius on the container */
+  padding: 0 12px; /* Add horizontal padding to the container */
+}
+
+.phone-input-group .input-icon {
+  position: static; /* Let flexbox handle positioning */
+  transform: none; /* Remove transform */
+  margin-right: 8px; /* Space after the icon */
+  color: #666; /* Keep icon color */
+  font-size: 1.2rem; /* Keep icon size */
+}
+
+.phone-input-group .country-code-container {
+  position: static; /* Let flexbox handle positioning */
+  transform: none; /* Remove transform */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between flag and country code */
+  color: #333;
+  font-size: 1.1rem;
+  margin-right: 8px; /* Space after country code */
+  z-index: auto; /* Reset z-index */
+}
+
+.phone-input-group .country-code-container .flag-placeholder {
+  font-size: 1.2rem;
+}
+
+.phone-input-group .phone-input {
+  flex-grow: 1; /* Allow input to take up remaining space */
+  padding: 12px 0; /* Adjust padding, border is on container now */
+  border: none; /* Remove border from input field */
+  border-radius: 0; /* Remove border radius from input field */
+  font-size: 1.1rem;
+  color: #333;
+  outline: none; /* Remove outline on focus, will handle focus on container */
+}
+
+.phone-input-group:focus-within {
+  border-color: #007bff; /* Apply focus style to the container */
+}
+
+.phone-input-group .phone-input::placeholder {
   color: #666;
 }
 
-input,
+/* Ensure general input styles don't override specific phone input styles where needed */
+/* Adjusting padding for other inputs that still use the old structure */
+input:not(.phone-input),
 .gender-select {
   width: 100%;
-  padding: 12px 12px 12px 40px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 12px 12px 12px 40px; /* Keep original padding for inputs with just an icon */
+  border: 1px solid #333; /* Use color from palette */
+  border-radius: 5px; /* Keep border radius */
+  font-size: 1.1rem;
+  color: #333;
   transition: border-color 0.3s;
+}
+
+input:not(.phone-input)::placeholder {
+  color: #666;
 }
 
 .gender-select {
@@ -97,18 +161,18 @@ input:focus,
 }
 
 .auth-button {
-  background-color: #007bff;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   padding: 12px;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .auth-button:hover {
-  background-color: #0056b3;
+  background-color: #000000a3;
 }
 
 .divider {
@@ -122,13 +186,13 @@ input:focus,
 .divider::after {
   content: '';
   flex: 1;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #333;
 }
 
 .divider span {
   padding: 0 1rem;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .google-button {
@@ -138,10 +202,11 @@ input:focus,
   gap: 10px;
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #333;
   border-radius: 5px;
   background-color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #333;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -153,11 +218,11 @@ input:focus,
 .auth-footer {
   text-align: center;
   margin-top: 1.5rem;
-  color: #666;
+  color: #333;
 }
 
 .auth-link {
-  color: #007bff;
+  color: #333;
   text-decoration: none;
   font-weight: 500;
 }

@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FiMail, FiLock, FiUser, FiPhone } from 'react-icons/fi';
+import { FiMail, FiLock, FiUser } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc';
 import { IconBaseProps } from 'react-icons';
 import './Auth.css';
 import authImage from '../../assets/Tshirts/Other Designs/Dream/main image.png'; // Assuming you have an image here
 
 // Define icon types
-const MailIcon = FiMail as React.ComponentType<IconBaseProps>;
-const LockIcon = FiLock as React.ComponentType<IconBaseProps>;
-const UserIcon = FiUser as React.ComponentType<IconBaseProps>;
-const PhoneIcon = FiPhone as React.ComponentType<IconBaseProps>;
-const GoogleIcon = FcGoogle as React.ComponentType<IconBaseProps>;
+const MailIcon = FiMail as any;
+const LockIcon = FiLock as any;
+const UserIcon = FiUser as any;
+// Removed PhoneIcon = FiPhone as any;
+const GoogleIcon = FcGoogle as any;
 
 const Signup: React.FC = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
+    gender: 'male',
     password: '',
-    gender: 'prefer-not-to-say',
   });
+   const [countryCode] = useState('+91'); // Autoselected to +91
   const [error, setError] = useState('');
 
   const handleChange = (
@@ -36,7 +38,10 @@ const Signup: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    
+
+    // TODO: Add client-side password validation here (Capital, small, special symbol, number)
+    // TODO: Add client-side phone number validation here (exactly 10 digits)
+
     try {
       // TODO: Implement actual signup logic here
       console.log('Signup attempt:', formData);
@@ -60,8 +65,8 @@ const Signup: React.FC = () => {
     <div className="auth-page-container">
       <div className="auth-form-section">
         <div className="auth-box">
-          <h2>Create Account</h2>
-          <p className="auth-subtitle">Please fill in your details</p>
+          <h2>No Account? No worries!</h2>
+          <p className="auth-subtitle">Be the part of the Trap Fashion Family</p>
 
           {error && <div className="error-message">{error}</div>}
 
@@ -70,9 +75,21 @@ const Signup: React.FC = () => {
               <UserIcon className="input-icon" />
               <input
                 type="text"
-                name="name"
-                placeholder="Full Name"
-                value={formData.name}
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+             <div className="form-group">
+              <UserIcon className="input-icon" />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
                 onChange={handleChange}
                 required
               />
@@ -90,8 +107,13 @@ const Signup: React.FC = () => {
               />
             </div>
 
-            <div className="form-group">
-              <PhoneIcon className="input-icon" />
+             <div className="form-group phone-input-group">
+              {/* Removed PhoneIcon className="input-icon" */}
+               <div className="country-code-container">
+                 {/* Placeholder for Indian Flag icon */}
+                 <span className="flag-placeholder">🇮🇳</span> {/* Using emoji as placeholder */}
+                 <span className="country-code">{countryCode}</span>
+               </div>
               <input
                 type="tel"
                 name="phone"
@@ -99,6 +121,8 @@ const Signup: React.FC = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                className="phone-input"
+                maxLength={10} // Restrict to 10 digits
               />
             </div>
 
@@ -112,6 +136,7 @@ const Signup: React.FC = () => {
                 onChange={handleChange}
                 required
               />
+              {/* TODO: Add client-side password validation feedback here */}
             </div>
 
             <div className="form-group">
@@ -121,9 +146,9 @@ const Signup: React.FC = () => {
                 onChange={handleChange}
                 className="gender-select"
               >
-                <option value="prefer-not-to-say">Prefer not to say</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
               </select>
             </div>
 
@@ -138,7 +163,7 @@ const Signup: React.FC = () => {
 
           <button onClick={handleGoogleSignIn} className="google-button">
             <GoogleIcon size={20} />
-            Sign up with Google
+            Continue with Google
           </button>
 
           <p className="auth-footer">

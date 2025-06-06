@@ -41,7 +41,7 @@ const menuItems = [
   { label: 'Career', icon: BriefcaseIcon, link: '/career' },
   { label: 'About Us', icon: InfoIcon, link: '/about' },
   { label: 'Help & Support', icon: HelpCircleIcon, link: '/help' },
-  { label: 'Account', icon: UserCheckIcon, link: '/account' },
+  { label: 'Account', icon: UserCheckIcon, link: '/login' },
 ];
 
 const Navbar: React.FC = () => {

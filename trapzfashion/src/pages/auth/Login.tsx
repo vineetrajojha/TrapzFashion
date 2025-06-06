@@ -53,7 +53,7 @@ const Login: React.FC = () => {
     <div className="auth-page-container">
       <div className="auth-form-section">
         <div className="auth-box">
-          <h2>Welcome Back</h2>
+          <h1>Hey Buddy!</h1><h2>We missed you, Welcome Back</h2>
           <p className="auth-subtitle">Please sign in to continue</p>
 
           {error && <div className="error-message">{error}</div>}
@@ -84,7 +84,7 @@ const Login: React.FC = () => {
             </div>
 
             <button type="submit" className="auth-button">
-              Sign In
+              Continue
             </button>
           </form>
 
@@ -94,7 +94,7 @@ const Login: React.FC = () => {
 
           <button onClick={handleGoogleSignIn} className="google-button">
             <GoogleIcon size={20} />
-            Sign in with Google
+            Continue with  Google
           </button>
 
           <p className="auth-footer">
