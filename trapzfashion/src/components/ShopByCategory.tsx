@@ -3,9 +3,6 @@ import './ShopByCategory.css';
 import {
   FiCircle, // Using simple circle as placeholder or abstract icon
   FiTrello, // Represents a collection/grid
-  FiPackage, // Represents items/products
-  FiTag, // Represents categories/labels
-  FiSquare, // Another simple shape
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 
@@ -19,32 +16,17 @@ const categories: Category[] = [
   {
     name: 'T-Shirts',
     icon: FiCircle, // Store component directly
-    link: '/categories/sneakers',
+    link: '/categories/T-Shirts',
   },
   {
     name: 'Hoodies',
     icon: FiTrello, // Store component directly
-    link: '/categories/sandals',
-  },
-  {
-    name: 'IPL Merches',
-    icon: FiPackage, // Store component directly
-    link: '/categories/boots',
-  },
-  {
-    name: 'Jackets',
-    icon: FiTag, // Store component directly
-    link: '/categories/heels',
-  },
-  {
-    name: 'Denims',
-    icon: FiSquare, // Store component directly
-    link: '/categories/flats',
+    link: '/categories/Hoodies',
   },
   {
     name: 'Sportswear',
     icon: FiCircle, // Store component directly
-    link: '/categories/sportswear',
+    link: '/categories/Sportswear',
   },
 ];
 

@@ -1,36 +1,27 @@
 import React from 'react';
 import './Collections.css';
+import tshirt from '../assets/Tshirts/Bring your Childhood/Mario/Mario.png'
+import hoodie from '../assets/Tshirts/Other Designs/Spiderman/7.png'
+import third from '../assets/Tshirts/Bring your Childhood/Temple Run/MAin.png'
 
 const collections = [
   {
-    title: `Support Your Favourite Team`,
-    subtitle: 'Fan Merch Edition · IPL 2025',
-    image: '/assets/images/default-collection.png',
+    title: `Super Mario`,
+    subtitle: 'The Real OGs',
+    image: tshirt,
     link: '/collections/knit-af',
   },
   {
-    title: 'Hoodies House',
-    subtitle: 'Limited Edition Hoodies',
-    image: '/assets/images/default-collection.png',
+    title: 'Spiderman',
+    subtitle: 'Choose your own superhero',
+    image: hoodie,
     link: '/collections/denim-hues',
   },
   {
-    title: 'Summer Ends',
-    subtitle: 'New Collection Just Dropped',
-    image: '/assets/images/default-collection.png',
+    title: 'Temple Run',
+    subtitle: 'Your favourite Games collection',
+    image: third,
     link: '/collections/summer-ends',
-  },
-  {
-    title: 'FESTIVAL FLAIR',
-    subtitle: 'Celebrate in Style',
-    image: '/assets/images/default-collection.png',
-    link: '/collections/festival-flair',
-  },
-  {
-    title: 'MERCH MADNESS',
-    subtitle: 'Exclusive Merchandise Drop',
-    image: '/assets/images/default-collection.png',
-    link: '/collections/merch-madness',
   },
 ];
 

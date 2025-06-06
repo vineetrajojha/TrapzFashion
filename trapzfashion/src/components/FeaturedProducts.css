@@ -35,12 +35,14 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: flex;
   flex-direction: column; /* Stack image and info vertically */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
 }
 
 .product-image-wrapper {
+  position: relative;
   width: 100%;
   /* maintain aspect ratio */
-  position: relative;
   padding-top: 100%; /* 1:1 Aspect Ratio */
   background-color: #f0f0f0; /* Placeholder background for image area */
 }
@@ -80,7 +82,7 @@
 
 /* Hide default slick-carousel arrows */
 .slick-prev, .slick-next {
-    display: none !important;
+  display: none !important;
 }
 
 /* Style for the dots */

@@ -10,9 +10,12 @@ import ShopByCategory from './components/ShopByCategory';
 import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import ComingSoon from './components/ComingSoon';
-import ProductDetail from './components/ProductDetail';
+import ProductDetail from './pages/product/ProductDetail';
+import { getFeaturedProducts } from './data/products';
 
 function App() {
+  const featuredProducts = getFeaturedProducts();
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -24,7 +27,7 @@ function App() {
                 <Hero />
                 <ShopByCategory />
                 <Collections />
-                <FeaturedProducts />
+                <FeaturedProducts products={featuredProducts} />
               </>
             } />
             <Route path="/login" element={<Login />} />

@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Product } from '../types';
 import './FeaturedProducts.css';
-import { getFeaturedProducts } from '../data/products';
 
-const FeaturedProducts: React.FC = () => {
-  const featuredProducts = getFeaturedProducts();
+interface FeaturedProductsProps {
+  products: Product[];
+}
 
+const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -53,17 +56,17 @@ const FeaturedProducts: React.FC = () => {
       </div>
       <div className="products-list">
         <Slider {...settings}>
-          {featuredProducts.map((product) => (
-            <div key={product.id} className="product-card">
+          {products.map((product) => (
+            <Link to={`/product/${product.id}`} key={product.id} className="product-card">
               <div className="product-image-wrapper">
-                 <img src={product.image} alt={product.name} className="product-image" />
+                <img src={product.images[0]} alt={product.name} className="product-image" />
               </div>
               <div className="product-info">
                 <div className="product-name">{product.name}</div>
                 <div className="product-availability">{product.availability}</div>
                 <div className="product-price">{product.price}</div>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
       </div>
