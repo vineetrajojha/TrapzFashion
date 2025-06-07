@@ -1,4 +1,6 @@
 import mario from '../assets/Tshirts/Bring your Childhood/Mario/Mario.png'
+import mario2 from '../assets/Tshirts/Bring your Childhood/Mario/2.png'
+// same goes on for importing all the images and using them in different products!!!!!!!
 import { Product } from '../types';
 
 export interface SizeChart {
@@ -26,12 +28,12 @@ export interface KeyHighlights {
 
 export const products: Product[] = [
   {
-    id: 1,
+    id: 1,  // so we have id for different products like1,2,3,4.....
     name: 'Mario T-Shirt',
     brandLogo: mario,
     images: [
       mario,
-      '/assets/Tshirts/Bring your Childhood/Mario/Mario-back.png',
+      mario2,
       '/assets/Tshirts/Bring your Childhood/Mario/Mario-detail.png',
       '/assets/Tshirts/Bring your Childhood/Mario/Mario-wear.png'
     ],
@@ -59,7 +61,7 @@ export const products: Product[] = [
       expressDelivery: '1-2 business days',
       pincodeDelivery: true
     },
-    youMayAlsoLike: [2, 7, 11]
+    youMayAlsoLike: [2, 7, 11] /// these are the product details you can edit/modify them and when done with the edits
   },
   {
     id: 2,
