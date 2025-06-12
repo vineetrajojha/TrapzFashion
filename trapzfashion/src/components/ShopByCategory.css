@@ -1,6 +1,6 @@
 .shop-by-category-section {
   padding: 40px 0;
-  background: #ffff;
+  background: #fff;
 }
 
 .shop-by-category-heading {
@@ -9,17 +9,16 @@
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
-  color: #222;
+  color: #000000;
 }
 
 .category-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  gap: 2rem;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .category-item {
@@ -27,9 +26,10 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #333;
+  color: #000;
   transition: transform 0.2s;
 }
+
 .category-item:hover {
   transform: translateY(-5px);
 }
@@ -37,53 +37,40 @@
 .category-icon {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: box-shadow 0.2s;
-  color: #000000;
+  background: #f5f5f5;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
-.category-icon:hover {
-  color: #fff;
-  background-color: #000000;
-}
-.category-item:hover .category-icon {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-.category-icon svg {
-  width: 40px;
-  height: 40px;
+.category-icon i {
+  font-size: 2rem;
+  color: #333;
 }
 
 .category-name {
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-@media (max-width: 600px) {
-  .shop-by-category-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
+@media (max-width: 768px) {
   .category-list {
-    gap: 20px;
-    padding: 0 0.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
+  
   .category-icon {
     width: 60px;
     height: 60px;
   }
-  .category-icon svg {
-    width: 30px;
-    height: 30px;
+  
+  .category-icon i {
+    font-size: 1.5rem;
   }
+  
   .category-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 } 

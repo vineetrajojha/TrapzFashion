@@ -1,24 +1,24 @@
 import React from 'react';
 import './Collections.css';
 import tshirt from '../assets/Tshirts/Bring your Childhood/Mario/Mario.png'
-import hoodie from '../assets/Tshirts/Other Designs/Spiderman/7.png'
-import third from '../assets/Tshirts/Bring your Childhood/Temple Run/MAin.png'
+import hoodie from '../assets/Tshirts/Trap Themed/Trap Red Snake/BG.png'
+import third from '../assets/Tshirts/Other Designs/Dream/main image.png'
 
 const collections = [
   {
-    title: `Super Mario`,
+    title: `Bring Your Childhood`,
     subtitle: 'The Real OGs',
     image: tshirt,
     link: '/collections/knit-af',
   },
   {
-    title: 'Spiderman',
+    title: 'Trap Themed',
     subtitle: 'Choose your own superhero',
     image: hoodie,
     link: '/collections/denim-hues',
   },
   {
-    title: 'Temple Run',
+    title: 'Other Designs',
     subtitle: 'Your favourite Games collection',
     image: third,
     link: '/collections/summer-ends',
@@ -34,7 +34,13 @@ const Collections: React.FC = () => {
       <div className="collections-top-row">
         {topRow.map((col) => (
           <div className="collection-poster big" key={col.title}>
-            <a href={col.link} className="collection-image-link" style={{ backgroundImage: `url(${col.image})` }}>
+            <a href={col.link} className="collection-image-link">
+              <img 
+                src={col.image} 
+                alt={col.title}
+                className="collection-image"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
               <div className="collection-overlay">
                 <div className="collection-text">
                   <h2 className="collection-title">{col.title}</h2>
